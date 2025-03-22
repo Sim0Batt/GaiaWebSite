@@ -10,7 +10,7 @@ export const setIpAddress = (status) => {
 
 export const fetchData = async () => {
   try {
-    const response = await axios.get(`http://${ipAddress.value}:8000/api/hello`)
+    const response = await axios.get(`https://${ipAddress.value}:8000/api/hello`)
     if (!response || !response.data) {
       throw new Error('No data received')
     }
@@ -65,7 +65,7 @@ export const readTemperature = async () => {
 export const gaiaRequestOnLaptopRapid = async (gRequest) => {
   try {
     const response = await axios.get(
-      `http://${ipAddress.value}:8000/api/get_rapid_response/${gRequest}`,
+      `https://${ipAddress.value}:8000/api/get_rapid_response/${gRequest}`,
     )
     if (!response || !response.data) {
       throw new Error('No data received')
@@ -84,7 +84,7 @@ export const gaiaRequestOnLaptopRapid = async (gRequest) => {
 export const gaiaRequestOnLaptopVocal = async (gRequest) => {
   try {
     const response = await axios.get(
-      `http://${ipAddress.value}:8000/api/get_vocal_response/${gRequest}`,
+      `https://${ipAddress.value}:8000/api/get_vocal_response/${gRequest}`,
     )
     if (!response || !response.data) {
       throw new Error('No data received')
