@@ -84,3 +84,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  color: black;
+  border-radius: 10px;
+  transition: 0.3s;
+}
