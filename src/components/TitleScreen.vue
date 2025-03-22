@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title">Gaia Helper</h1>
+    <h1 class="title">Welcome To Gaia Assistant</h1>
   </div>
 </template>
 
