@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ref } from 'vue'
 
-export const ipAddress = ref('127.0.0.1')
+export const ipAddress = ref('192.168.1.139')
 
 export const setIpAddress = (status) => {
   ipAddress.value = status
@@ -15,24 +15,6 @@ export const fetchData = async () => {
       throw new Error('No data received')
     }
     return response.data.timestamp
-  } catch (error) {
-    if (error.response) {
-      return `Server error: ${error.response.status}`
-    } else if (error.request) {
-      return 'No response from server'
-    } else {
-      return `Error: ${error.message}`
-    }
-  }
-}
-
-export const gaiaOpenApp = async () => {
-  try {
-    const response = await axios.get(`https://${ipAddress.value}:8000/api/openGaia/`)
-    if (!response || !response.data) {
-      throw new Error('No data received')
-    }
-    return response.data.message
   } catch (error) {
     if (error.response) {
       return `Server error: ${error.response.status}`
@@ -118,4 +100,4 @@ export const switchOffRasp = async () => {
   }
 }
 
-export default { fetchData, gaiaOpenApp, readTemperature, switchOffRasp }
+export default { fetchData, readTemperature, switchOffRasp }
