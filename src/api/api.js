@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ref } from 'vue'
 
-export const ipAddress = ref('192.168.1.139')
+export const ipAddress = ref('127.0.0.1')
 
 export const setIpAddress = (status) => {
   ipAddress.value = status
